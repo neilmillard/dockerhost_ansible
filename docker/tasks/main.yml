@@ -1,7 +1,0 @@
----
-- include: debian.yml
-  when: ansible_os_family|lower == 'debian'
-
-- include: centos.yml
-  when: ansible_distribution|lower == 'centos'
-...
