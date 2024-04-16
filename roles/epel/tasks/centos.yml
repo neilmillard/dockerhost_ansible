@@ -1,0 +1,11 @@
+- name: CentOS | Install Repo
+  yum:
+    state: "present"
+    name:
+      - "epel-release"
+      - "https://repo.ius.io/ius-release-el7.rpm"
+
+- name: CentOS | Update All Packages
+  yum:
+    name: "*"
+    state: "latest"

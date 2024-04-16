@@ -1,0 +1,19 @@
+---
+- name: Debian/Ubuntu | Install NTP
+  apt:
+    update_cache: "yes"
+    state: "present"
+    name:
+      - "ntp"
+  register: ntpinstall
+
+- name: Debian/Ubuntu | Stop NTP Service
+  service: name=ntp state=stopped
+
+- name: Debian/Ubuntu | Set System Time
+  command: "ntpd -gq"
+
+- name: Debian/Ubuntu | Start NTP Service
+  service: name=ntp enabled=no
+  when: ntpinstall.changed
+...

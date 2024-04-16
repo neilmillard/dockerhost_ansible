@@ -1,0 +1,6 @@
+# Use this file to help build your ansible hosts file
+# You will need to specify the variables below to match your setup
+
+[dockerhostall:vars]
+letsencrypt_email=<YOUR EMAIL> #CHANGE ME - Your Email Address
+staging=false
