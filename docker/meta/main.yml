@@ -1,0 +1,7 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: "https://github.com/neilmillard/ansible_dockerhost"
+  description: "Install docker."
+  min_ansible_version: 2.4
