@@ -1,7 +1,7 @@
 ---
-- include: debian.yml
+- include_tasks: debian.yml
   when: ansible_os_family == 'Debian'
 
-- include: centos.yml
+- include_tasks: centos.yml
   when: ansible_distribution == 'CentOS'
 ...

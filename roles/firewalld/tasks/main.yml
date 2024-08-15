@@ -1,4 +1,4 @@
 ---
-- include: centos.yml
+- include_tasks: centos.yml
   when: ansible_distribution|lower == 'centos'
 ...
